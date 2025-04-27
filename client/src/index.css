@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.results-panel {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+#fire-button {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#fire-container {
+  font-size: 24px;
+  filter: blur(var(--blur));
+  -webkit-filter: blur(var(--blur));
+  position: absolute;
+  width: 10em;
+  height: 6em;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#fire-button:hover #fire-container {
+  opacity: 1;
+}
+
+.pick-region-button {
+  background-color: #ff9800;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.pick-region-button:hover {
+  background-color: #e68a00;
+}
